@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+    width: 100%;
+    display: block;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+    list-style: none;
+    margin-bottom: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
+    color: #000;
 }
-
-.App-link {
-  color: #61dafb;
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #14131a;
+    --primarycolor: #e2d703;
+    --secondarycolor: #111d1d;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listmovie {
+    background-size: cover;
+    margin: 30px 0;
+}
+.listmovie .slick-slide .cardmovie {
+    margin: 0 10px;
+}
+.listmovie .title {
+    text-align: center;
+    padding: 30px 0;
+}
+.listmovie .title h3 {
+    color: var(--primarycolor);
+    font-size: 15px;
+    font-weight: 300;
+}
+.listmovie .title h1 {
+    color: #fff;
+}
+.cardmovie {
+    display: block;
+}
+.cardmovie img {
+    border-radius: 10px;
+}
+.cardmovie .thumb {
+    position: relative;
+}
+.cardmovie .thumb::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255 255 255 / 16%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.cardmovie .thumb:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+.cardmovie h3 {
+    font-size: 14px;
+    color: #fff;
+    margin: 5px 0;
+}
+.cardmovie .day {
+    color: #fff;
+    font-size: 13px;
+}
+.cardmovie .rate {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--primarycolor);
+}
+.show {
+    margin: 40px 0;
+}
+.show .show-more {
+    color: #fff;
+    border: 2px solid var(--primarycolor);
+    background-color: var(--primarycolor);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.show .show-more i {
+    margin-right: 10px;
+}
+.show .show-more:hover {
+    background-color: var(--secondarycolor);
+    border: 2px solid var(--primarycolor);
+}
+@media (max-width: 767px) {
+    .slick-prev {
+        left: 0;
+    }
+    .slick-next {
+        right: 0;
+    }
 }
